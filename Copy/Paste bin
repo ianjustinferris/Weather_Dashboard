@@ -1,0 +1,13 @@
+  <hero>
+        <img>
+        <div class="cityInfo">
+            <ul>
+                <h2>City Name/ DATE/ YEAR</h2>
+                <li>City Info</li>
+                <li>City Info</li>
+                <li>City Info</li>
+                <li>City Info</li>
+            </ul>
+        </div>
+        </img>
+    </hero>

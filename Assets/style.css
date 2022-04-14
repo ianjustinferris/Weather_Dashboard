@@ -1,0 +1,180 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+img {
+  box-shadow: 0 0 10px 5px rgb(66, 66, 66);
+  border-radius: 10px;
+  opacity: 0.5;
+}
+
+h2 {
+  position: relative;
+  bottom: 540px;
+  left: 20px;
+  color: #fff;
+}
+
+#weatherData {
+  list-style-type: none;
+  text-decoration: none;
+  position: relative;
+  left: 21px;
+  bottom: 540px;
+  color: #fff;
+}
+/* 
+.jumbotron {
+  padding: 100px;
+} */
+
+.mainContainer {
+  border: black solid 1px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: black solid 1px; */
+}
+.navbar {
+  color: #fff;
+  background: rgb(12, 46, 121);
+  /* background: linear-gradient(
+    270deg,
+    rgba(12, 46, 121, 1) 0%,
+    rgba(38, 170, 187, 1) 100%
+  ); */
+  width: 100%;
+  margin: 0;
+}
+.nav {
+  border: black solid 1px;
+  background-color: rgb(32, 56, 95);
+}
+
+.fa-sun-haze {
+  color: rgb(255, 230, 2);
+}
+
+.inputContainer {
+  /* box-shadow: 0 0 10px 5px gray; */
+  border-radius: 10px;
+  /* background-color: rgb(243, 243, 239); */
+  /* border: black solid 1px; */
+  color: black;
+  /* background-color: rgb(189, 189, 189); */
+}
+
+.resultsContainer {
+  border-radius: 10px;
+  /* background-color: rgb(189, 189, 189); */
+  border-radius: 10px;
+  margin-top: 1.5vw;
+  /* border: black solid 1px; */
+  color: black;
+}
+
+.hero {
+  border: black solid 1px;
+}
+
+.cardContainer {
+  position: relative;
+  bottom: 455px;
+  margin-top: 0px;
+  /* border: black solid 1px; */
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#cityName {
+  border-radius: 5px;
+  border: 1px solid black;
+}
+#fiveDay {
+  color: #fff;
+}
+
+.card {
+  /* box-shadow: 0 0 10px 5px rgb(99, 98, 98); */
+
+  border-radius: 10px;
+  color: #fff;
+  margin: 1vw;
+}
+
+button {
+  width: 100%;
+}
+
+input {
+  border-radius: 5px;
+  width: 100%;
+}
+
+i {
+  font-size: 3vw;
+  color: black;
+}
+
+button {
+  background-color: #ffffff;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+    "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  outline: none;
+  padding: 13px 23px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+    transform 0.1s;
+  user-select: none;
+  -webkit-user-select: none;
+  width: 12-col;
+}
+
+button:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow 0.2s;
+}
+
+button:active {
+  background-color: #f7f7f7;
+  border-color: #000000;
+  transform: scale(0.96);
+}
+
+button:disabled {
+  border-color: #dddddd;
+  color: #dddddd;
+  cursor: not-allowed;
+  opacity: 1;
+}

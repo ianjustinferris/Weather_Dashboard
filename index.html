@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/b809147cb0.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./Assets/style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+  <body>
+      <div class="container mainContainer>">
+  <nav class="navbar navbar-expand-lg ">
+      <div class="container">
+        <h1><i class="fa-solid fa-sun-haze"></i> Weather Dashboard</h1> 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <h2 class="nav-link" id="progressBtn"></h2>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<div class="row bottomContent h-80 p-0 table-row-equal">
+<aside class="container col-3 p-3 d-flex flex-column">
+    <div class="container inputContainer">
+        <h1>Search Cities:</h1>
+        <input class="col-12 m-0 p-0 " placeholder=" Atlanta e.g."></input>
+        <button>SUBMIT</button>
+    </div>
+    <div class="container resultsContainer h-100  p-0">
+        <ul>
+            <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
+            <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
+            <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
+            <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
+            <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
+            <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
+            <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
+            <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
+            <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
+            <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
+            <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
+        </ul>
+    </div>
+</aside>
+
+<div class="container jumbotron col-9 p-3">
+  
+  
+   <img src="Atlanta.jpeg" style="width: 960px ; height: 550px">
+   <h2 class="display-4">Atlanta</h2>
+        
+                
+                <li id="weatherData">TEMP:</li>
+                <li id="weatherData">WIND:</li>
+                <li id="weatherData">HUMIDITY:</li>
+                <li id="weatherData">UV INDEX:</li>
+       
+    </img>
+
+<section class="container cardContainer  col-12 d-inline-flex p-0">
+      
+<div class="card" style="width: 18rem;">
+    <div class="iconContainer card-body container">
+  <i class="fa-solid fa-sun"></i>
+  </div>
+  <div class="cardDate">
+    <p class="card-title">DATE</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Temp:</li>
+    <li class="list-group-item">Wind:</li>
+    <li class="list-group-item">Humidity:</li>
+  </ul>
+</div>
+<div class="card" style="width: 18rem;">
+    <div class="iconContainer card-body container">
+  <i class="fa-solid fa-cloud-rain"></i>
+  </div>
+  <div class="cardDate">
+    <p class="card-title">DATE</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Temp:</li>
+    <li class="list-group-item">Wind:</li>
+    <li class="list-group-item">Humidity:</li>
+  </ul>
+</div>
+<div class="card" style="width: 18rem;">
+    <div class="iconContainer card-body  container">
+  <i class="fa-solid fa-wind"></i>
+  </div>
+  <div class="cardDate">
+    <p class="card-title">DATE</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Temp:</li>
+    <li class="list-group-item">Wind:</li>
+    <li class="list-group-item">Humidity:</li>
+  </ul>
+</div>
+<div class="card" style="width: 18rem;">
+    <div class="iconContainer card-body  container">
+  <i class="fa-solid fa-sun-cloud"></i>
+  </div>
+  <div class="cardDate">
+    <p class="card-title">DATE</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Temp:</li>
+    <li class="list-group-item">Wind:</li>
+    <li class="list-group-item">Humidity:</li>
+  </ul>
+</div>
+<div class="card" style="width: 18rem;">
+    <div class="iconContainer card-body container">
+  <i class="fa-solid fa-clouds-sun"></i>
+  </div>
+  <div class="cardDate">
+    <p class="card-title">DATE</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Temp:</li>
+    <li class="list-group-item">Wind:</li>
+    <li class="list-group-item">Humidity:</li>
+  </ul>
+</div>
+</section>
+</div>
+
+ <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./Assets/script.js"></script>
+  </body>
+</html>
