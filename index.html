@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_W7NL2luOgMEHOWeEZNAKV_GGZRudU3k&libraries=places&callback=initMap">
+</script> -->
     <script src="https://kit.fontawesome.com/b809147cb0.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
@@ -34,12 +37,13 @@
 <div class="row bottomContent h-80 p-0 table-row-equal">
 <aside class="container col-3 p-3 d-flex flex-column">
     <div class="container inputContainer">
-        <h1>Search Cities:</h1>
-        <input class="col-12 m-0 p-0 " placeholder=" Atlanta e.g."></input>
+        <!-- <h1>Search Cities:</h1> -->
+        <input type="text" class="form-control col-12 m-0 p-0 " placeholder=" Enter the City" id="input"></input>
         <button>SUBMIT</button>
     </div>
     <div class="container resultsContainer h-100  p-0">
         <ul>
+            <!-- <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
             <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
             <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
             <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
@@ -49,8 +53,7 @@
             <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
             <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
             <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
-            <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
-            <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li>
+            <li class="m-1 d-flex justify-content-center" id="cityName">City Name</li> -->
         </ul>
     </div>
 </aside>
@@ -67,7 +70,7 @@
                 <li id="weatherData">HUMIDITY:</li>
                 <li id="weatherData">UV INDEX:</li>
        
-    </img>
+    
 
 <section class="container cardContainer  col-12 d-inline-flex p-0">
       
@@ -138,6 +141,8 @@
 </div>
 </section>
 </div>
+</img>
+
 
  <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -145,5 +150,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="./Assets/script.js"></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_W7NL2luOgMEHOWeEZNAKV_GGZRudU3k&libraries=places&callback=initMap">
+</script>
   </body>
 </html>

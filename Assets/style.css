@@ -93,7 +93,7 @@ h2 {
 
 .cardContainer {
   position: relative;
-  bottom: 455px;
+  bottom: 475px;
   margin-top: 0px;
   /* border: black solid 1px; */
 }
@@ -134,11 +134,11 @@ i {
 }
 
 button {
-  background-color: #ffffff;
+  background-color: rgb(12, 46, 121);
   border: 1px solid #222222;
   border-radius: 8px;
   box-sizing: border-box;
-  color: #222222;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
