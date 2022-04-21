@@ -1,3 +1,5 @@
+
+
 var cityTitleEl = document.getElementById("cityTitle")
 
 var submitBtnEl = document.getElementById("submitBtn")
@@ -26,15 +28,13 @@ navigator.geolocation.getCurrentPosition((position) => {
 
 
 
-function storeCity() {} 
-
-
 
 submitBtnEl.addEventListener('click', getWeather)
 
 //Fetch weather data
 function getWeather() {
-  
+
+
   var inputEl = document.getElementById('input').value
 
   console.log("User chose: " + inputEl)
@@ -51,6 +51,7 @@ if (!data.length) {
 }
 
 storeCity()
+
 
 //Get geo-coordinates and city name
 console.log(data)
@@ -165,7 +166,45 @@ cardHumidityEl5.innerText = ('Humidity: ' + Math.floor(data.daily[5].humidity) +
 }
 
 
+function storeCity(){
+cityHistoryEl = document.getElementById('cityHistory')
+cityHistoryEl.innerHTML= ' '
 
+var cityList = JSON.parse(localStorage.getItem('cityList')) || [] ;
+var newCity = JSON.stringify(cityList);
+var inputEl = document.getElementById('input').value
+
+// cityHistoryEl.child.remove()
+
+if (cityList.length < 6){
+if (cityList.includes(inputEl)) {
+  return;
+} else {
+cityList.push(inputEl)
+}
+var newCity = JSON.stringify(cityList);
+
+localStorage.setItem("cityList",newCity)
+
+
+
+
+for (var i=0;i<cityList.length;i++){
+    createList = document.createElement('button');
+    // if (cityHistoryEl.child.textContent != cityList[i]){
+    createList.textContent = cityList[i]
+    cityHistoryEl.appendChild(createList);
+    }
+  
+  }else {for (var i=0;i<cityList.length;i++){
+    createList = document.createElement('button');
+    // if (cityHistoryEl.child.textContent != cityList[i]){
+    createList.textContent = cityList[i]
+    cityHistoryEl.appendChild(createList);
+    }
+  }
+
+}
 
 
 
