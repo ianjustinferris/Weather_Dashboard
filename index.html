@@ -7,6 +7,9 @@
     <!-- <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_W7NL2luOgMEHOWeEZNAKV_GGZRudU3k&libraries=places&callback=initMap">
 </script> -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <script src="https://kit.fontawesome.com/b809147cb0.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     
@@ -39,7 +42,7 @@
     <div class="container inputContainer">
         <!-- <h1>Search Cities:</h1> -->
         <input type="text" class="form-control col-12 m-0 p-0 " placeholder=" Enter the City" id="input"></input>
-        <button>SUBMIT</button>
+        <button id="submitBtn">SUBMIT</button>
     </div>
     <div class="container resultsContainer h-100  p-0">
         <ul>
@@ -61,14 +64,14 @@
 <div class="container jumbotron col-9 p-3">
   
   
-   <img src="Atlanta.jpeg" style="width: 960px ; height: 550px">
-   <h2 class="display-4">Atlanta</h2>
+   <img style="width:960px; height:550px">
+   <h2 class="display-4" id="cityTitle">Atlanta</h2>
         
                 
-                <li id="weatherData">TEMP:</li>
-                <li id="weatherData">WIND:</li>
-                <li id="weatherData">HUMIDITY:</li>
-                <li id="weatherData">UV INDEX:</li>
+                <li class="weatherData" id="weatherDataTemp">TEMP:</li>
+                <li class="weatherData" id="weatherDataWind">WIND:</li>
+                <li class="weatherData" id="weatherDataHumidity">HUMIDITY:</li>
+                <li class="weatherData" id="weatherDataUV">UV INDEX:</li>
        
     
 
@@ -144,14 +147,15 @@
 </img>
 
 
+
  <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
     <script src="./Assets/script.js"></script>
-    <script async
+    <!-- <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_W7NL2luOgMEHOWeEZNAKV_GGZRudU3k&libraries=places&callback=initMap">
-</script>
+</script> -->
   </body>
 </html>

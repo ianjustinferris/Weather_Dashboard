@@ -22,16 +22,16 @@ h2 {
   position: relative;
   bottom: 540px;
   left: 20px;
-  color: #fff;
+  color: black;
 }
 
-#weatherData {
+.weatherData {
   list-style-type: none;
   text-decoration: none;
   position: relative;
   left: 21px;
   bottom: 540px;
-  color: #fff;
+  color: black;
 }
 /* 
 .jumbotron {
