@@ -16,7 +16,7 @@ var lat = ""
 
 var lon = ""
 
-var mainURL = "http://api.openweathermap.org/"
+var mainURL = "https://api.openweathermap.org/"
 
 var apiKey = "0c78d71a4447f663c83431188cfb1c4a"
 
@@ -105,7 +105,7 @@ let cardHumidityEl1 = document.getElementById('cardHumidity1')
 let imgEl1 = document.getElementById('img1')
 let icon1 = data.daily[1].weather[0].icon
 
-imgEl1.src = `http://openweathermap.org/img/wn/${icon1}@2x.png`
+imgEl1.src = `https://openweathermap.org/img/wn/${icon1}@2x.png`
 cardTempEl1.innerText = ('Temp: ' + Math.floor(data.daily[1].temp.day) + "˚ F")
 cardWindEl1.innerText = ('Wind: ' + Math.floor(data.daily[1].wind_speed) + " mph")
 cardHumidityEl1.innerText = ('Humidity: ' + Math.floor(data.daily[1].humidity) + "%")
@@ -117,7 +117,7 @@ let cardHumidityEl2 = document.getElementById('cardHumidity2')
 let imgEl2 = document.getElementById('img2')
 let icon2 = data.daily[2].weather[0].icon
 
-imgEl2.src = `http://openweathermap.org/img/wn/${icon2}@2x.png`
+imgEl2.src = `https://openweathermap.org/img/wn/${icon2}@2x.png`
 cardTempEl2.innerText = ('Temp: ' + Math.floor(data.daily[2].temp.day) + "˚ F")
 cardWindEl2.innerText = ('Wind: ' + Math.floor(data.daily[2].wind_speed) + " mph")
 cardHumidityEl2.innerText = ('Humidity: ' + Math.floor(data.daily[2].humidity) + "%")
@@ -129,7 +129,7 @@ let cardHumidityEl3 = document.getElementById('cardHumidity3')
 let imgEl3 = document.getElementById('img3')
 let icon3 = data.daily[3].weather[0].icon
 
-imgEl3.src = `http://openweathermap.org/img/wn/${icon3}@2x.png`
+imgEl3.src = `https://openweathermap.org/img/wn/${icon3}@2x.png`
 cardTempEl3.innerText = ('Temp: ' + Math.floor(data.daily[3].temp.day) + "˚ F")
 cardWindEl3.innerText = ('Wind: ' + Math.floor(data.daily[3].wind_speed) + " mph")
 cardHumidityEl3.innerText = ('Humidity: ' + Math.floor(data.daily[3].humidity) + "%")
@@ -141,7 +141,7 @@ let cardHumidityEl4 = document.getElementById('cardHumidity4')
 let imgEl4 = document.getElementById('img4')
 let icon4 = data.daily[4].weather[0].icon
 
-imgEl4.src = `http://openweathermap.org/img/wn/${icon4}@2x.png`
+imgEl4.src = `https://openweathermap.org/img/wn/${icon4}@2x.png`
 cardTempEl4.innerText = ('Temp: ' + Math.floor(data.daily[4].temp.day) + "˚ F")
 cardWindEl4.innerText = ('Wind: ' + Math.floor(data.daily[4].wind_speed) + " mph")
 cardHumidityEl4.innerText = ('Humidity: ' + Math.floor(data.daily[4].humidity) + "%")
@@ -153,7 +153,7 @@ let cardHumidityEl5 = document.getElementById('cardHumidity5')
 let imgEl5 = document.getElementById('img5')
 let icon5 = data.daily[5].weather[0].icon
 
-imgEl5.src = `http://openweathermap.org/img/wn/${icon5}@2x.png`
+imgEl5.src = `https://openweathermap.org/img/wn/${icon5}@2x.png`
 cardTempEl5.innerText = ('Temp: ' + Math.floor(data.daily[5].temp.day) + "˚ F")
 cardWindEl5.innerText = ('Wind: ' + Math.floor(data.daily[5].wind_speed) + " mph")
 cardHumidityEl5.innerText = ('Humidity: ' + Math.floor(data.daily[5].humidity) + "%")
