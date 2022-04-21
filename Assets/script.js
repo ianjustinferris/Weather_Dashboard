@@ -19,6 +19,9 @@ var mainURL = "http://api.openweathermap.org/"
 var apiKey = "0c78d71a4447f663c83431188cfb1c4a"
 
 
+navigator.geolocation.getCurrentPosition((position) => {
+  console.log("User is at: " + "Lat: " + position.coords.latitude + " " + "Lon: " +  position.coords.longitude)
+});
 
 
 
@@ -27,9 +30,10 @@ function storeCity() {}
 
 
 
-submitBtnEl.addEventListener('click', getLatLon)
+submitBtnEl.addEventListener('click', getWeather)
 
-function getLatLon() {
+//Fetch weather data
+function getWeather() {
   
   var inputEl = document.getElementById('input').value
 
@@ -48,6 +52,7 @@ if (!data.length) {
 
 storeCity()
 
+//Get geo-coordinates and city name
 console.log(data)
 
 let name = data[0].name
@@ -69,17 +74,89 @@ fetch(weatherURL)
 .then (function (data) {
   console.log(data)
 
-  temp = data.current.temp
-
+  //Populate main weather card
   cityTitleEl.innerHTML = name
 
-  tempEl.innerHTML = ("TEMP: " + Math.floor(temp) + "˚ F")
+  tempEl.innerHTML = ("TEMP: " + Math.floor(data.current.temp) + "˚ F")
 
   windEl.textContent = ("WIND: " + data.current.wind_speed + " mph")
 
-  humidEl.textContent = ("HUMIDITY: " + data.current.humidity + " %")
+  humidEl.textContent = ("HUMIDITY: " + data.current.humidity + "%")
 
   uvEl.textContent = ("UV INDEX: " + data.current.uvi)
+
+  if (data.current.uvi < 3) {
+    uvEl.style.color = 'green'
+  } else if (data.current.uvi > 2 && data.current.uvi < 6) {
+    uvEl.style.color = 'yellow'
+  } else if (data.current.uvi > 5 && data.current.uvi < 8) {
+    uvEl.style.color = 'orange'
+  } else if (data.current.uvi > 7 && data.current.uvi < 11) {
+    uvEl.style.color = 'red'
+  } else uvEl.style.color = 'purple'
+
+//Populate 5-day forecast
+
+//card 1
+let cardTempEl1 = document.getElementById('cardTemp1')
+let cardWindEl1 = document.getElementById('cardWind1')
+let cardHumidityEl1 = document.getElementById('cardHumidity1')
+let imgEl1 = document.getElementById('img1')
+let icon1 = data.daily[1].weather[0].icon
+
+imgEl1.src = `http://openweathermap.org/img/wn/${icon1}@2x.png`
+cardTempEl1.innerText = ('Temp: ' + Math.floor(data.daily[1].temp.day) + "˚ F")
+cardWindEl1.innerText = ('Wind: ' + Math.floor(data.daily[1].wind_speed) + " mph")
+cardHumidityEl1.innerText = ('Humidity: ' + Math.floor(data.daily[1].humidity) + "%")
+
+//card 2
+let cardTempEl2 = document.getElementById('cardTemp2')
+let cardWindEl2 = document.getElementById('cardWind2')
+let cardHumidityEl2 = document.getElementById('cardHumidity2')
+let imgEl2 = document.getElementById('img2')
+let icon2 = data.daily[2].weather[0].icon
+
+imgEl2.src = `http://openweathermap.org/img/wn/${icon2}@2x.png`
+cardTempEl2.innerText = ('Temp: ' + Math.floor(data.daily[2].temp.day) + "˚ F")
+cardWindEl2.innerText = ('Wind: ' + Math.floor(data.daily[2].wind_speed) + " mph")
+cardHumidityEl2.innerText = ('Humidity: ' + Math.floor(data.daily[2].humidity) + "%")
+
+//card 3
+let cardTempEl3 = document.getElementById('cardTemp3')
+let cardWindEl3 = document.getElementById('cardWind3')
+let cardHumidityEl3 = document.getElementById('cardHumidity3')
+let imgEl3 = document.getElementById('img3')
+let icon3 = data.daily[3].weather[0].icon
+
+imgEl3.src = `http://openweathermap.org/img/wn/${icon3}@2x.png`
+cardTempEl3.innerText = ('Temp: ' + Math.floor(data.daily[3].temp.day) + "˚ F")
+cardWindEl3.innerText = ('Wind: ' + Math.floor(data.daily[3].wind_speed) + " mph")
+cardHumidityEl3.innerText = ('Humidity: ' + Math.floor(data.daily[3].humidity) + "%")
+
+//card 4
+let cardTempEl4 = document.getElementById('cardTemp4')
+let cardWindEl4 = document.getElementById('cardWind4')
+let cardHumidityEl4 = document.getElementById('cardHumidity4')
+let imgEl4 = document.getElementById('img4')
+let icon4 = data.daily[4].weather[0].icon
+
+imgEl4.src = `http://openweathermap.org/img/wn/${icon4}@2x.png`
+cardTempEl4.innerText = ('Temp: ' + Math.floor(data.daily[4].temp.day) + "˚ F")
+cardWindEl4.innerText = ('Wind: ' + Math.floor(data.daily[4].wind_speed) + " mph")
+cardHumidityEl4.innerText = ('Humidity: ' + Math.floor(data.daily[4].humidity) + "%")
+
+//card 5
+let cardTempEl5 = document.getElementById('cardTemp5')
+let cardWindEl5 = document.getElementById('cardWind5')
+let cardHumidityEl5 = document.getElementById('cardHumidity5')
+let imgEl5 = document.getElementById('img5')
+let icon5 = data.daily[5].weather[0].icon
+
+imgEl5.src = `http://openweathermap.org/img/wn/${icon5}@2x.png`
+cardTempEl5.innerText = ('Temp: ' + Math.floor(data.daily[5].temp.day) + "˚ F")
+cardWindEl5.innerText = ('Wind: ' + Math.floor(data.daily[5].wind_speed) + " mph")
+cardHumidityEl5.innerText = ('Humidity: ' + Math.floor(data.daily[5].humidity) + "%")
+
 })
 })
 

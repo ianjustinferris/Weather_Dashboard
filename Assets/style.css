@@ -13,9 +13,12 @@ body {
 }
 
 img {
-  box-shadow: 0 0 10px 5px rgb(66, 66, 66);
+  height: 6vw;
+  /* box-shadow: 0 0 10px 5px rgb(66, 66, 66); */
   border-radius: 10px;
-  opacity: 0.5;
+  opacity: 1;
+  padding: none;
+  margin: none;
 }
 
 h2 {
@@ -44,6 +47,7 @@ h2 {
   flex-wrap: wrap;
 }
 .iconContainer {
+  padding: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,7 +97,7 @@ h2 {
 
 .cardContainer {
   position: relative;
-  bottom: 475px;
+  bottom: 510px;
   margin-top: 0px;
   /* border: black solid 1px; */
 }
