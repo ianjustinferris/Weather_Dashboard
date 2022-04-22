@@ -20,6 +20,8 @@ var mainURL = "https://api.openweathermap.org/"
 
 var apiKey = "0c78d71a4447f663c83431188cfb1c4a"
 
+var cityDateEl = document.getElementById('cityDate')
+
 
 navigator.geolocation.getCurrentPosition((position) => {
   console.log("User is at: " + "Lat: " + position.coords.latitude + " " + "Lon: " +  position.coords.longitude)
@@ -53,8 +55,11 @@ if (!data.length) {
 storeCity()
 
 
+
 //Get geo-coordinates and city name
 console.log(data)
+
+
 
 let name = data[0].name
 
@@ -76,6 +81,10 @@ fetch(weatherURL)
   console.log(data)
 
   //Populate main weather card
+  console.log()
+  
+  cityDateEl.innerHTML = moment(Date.now()).format("L");
+
   cityTitleEl.innerHTML = name
 
   tempEl.innerHTML = ("TEMP: " + Math.floor(data.current.temp) + "˚ F")

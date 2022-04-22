@@ -12,6 +12,14 @@ body {
   width: 100%;
 }
 
+#hero {
+  background: rgb(12, 121, 112);
+  background: linear-gradient(
+    0deg,
+    rgba(12, 121, 112, 1) 0%,
+    rgba(12, 46, 121, 1) 100%
+  );
+}
 img {
   height: 6vw;
   /* box-shadow: 0 0 10px 5px rgb(66, 66, 66); */
@@ -25,7 +33,7 @@ h2 {
   position: relative;
   bottom: 540px;
   left: 20px;
-  color: black;
+  color: #fff;
 }
 
 .weatherData {
@@ -34,7 +42,7 @@ h2 {
   position: relative;
   left: 21px;
   bottom: 540px;
-  color: black;
+  color: #fff;
 }
 /* 
 .jumbotron {
@@ -114,12 +122,16 @@ ul {
 #fiveDay {
   color: #fff;
 }
-
+.card-title {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
 .card {
   /* box-shadow: 0 0 10px 5px rgb(99, 98, 98); */
-
+  background-color: rgb(72, 165, 157);
   border-radius: 10px;
-  color: #fff;
+  color: black;
   margin: 1vw;
 }
 
